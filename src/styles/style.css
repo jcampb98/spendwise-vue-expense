@@ -228,6 +228,69 @@ input[type="number"] {
   margin-bottom: 5px;
 }
 
+/* Chart Collapsible CSS */
+input[type='checkbox'] {
+  display: none;
+}
+
+.toggle-label {
+  display: block;
+  font-weight: bold;
+  font-family: monospace;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  text-align: center;
+  padding: 1rem;
+  color: #fff;
+  background: #9c88ff;
+  cursor: pointer;
+  border-radius: 7px;
+  transition: all 0.25s ease-out;
+}
+
+.toggle-label:hover {
+  color: #351c75;
+}
+
+.toggle-label::before {
+  content: ' ';
+  display: inline-block;
+  border-top: 5px solid transparent;
+  border-bottom: 5px solid transparent;
+  border-left: 5px solid currentcolor;
+  vertical-align: middle;
+  margin-right: .7rem;
+  transform: translateY(-2px);
+  transition: transform .2s ease-out;
+}
+
+.collapsible-content .content-inner {
+  background: rgb(250 224 66 .2);
+  border-bottom: 1px solid rgb(250 224 66 .45);
+  border-bottom-left-radius: 7px;
+  border-bottom-right-radius: 7px;
+  padding: .5rem 1rem;
+}
+
+.collapsible-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height .25s ease-in-out;
+}
+
+.toggle:checked + .toggle-label + .collapsible-content {
+  max-height: 100vh;
+}
+
+.toggle:checked + .lbl-toggle::before {
+  transform: rotate(90deg) translateX(-3px);
+}
+
+.toggle:checked + .toggle-label {
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
 /* Define mobile-responsive styles within a media query */
 @media only screen and (width <= 600px) {
   body {

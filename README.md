@@ -10,10 +10,10 @@
 
 ## Technologies Used
 
-- *Vue: A JavaScript library for building user interfaces.
-- *Vite.js: A build tool that aims to provide a faster and leaner development experience for modern web projects.
-- *Vitest: A unit test framework
-- *Playwright: a End-to-End test framework
+- Vue: A JavaScript library for building user interfaces.
+- Vite.js: A build tool that aims to provide a faster and leaner development experience for modern web projects.
+- Vitest: A unit test framework
+- Playwright: a End-to-End test framework
 
 ## Getting Started
 

@@ -8,6 +8,16 @@
       @transactionDeleted="handleDelete"
       @transactionUpdated="handleUpdate"
     />
+    <div class="wrap-collapsible">
+      <input id="collapsible" class="toggle" type="checkbox" checked>
+      <label for="collapsible" class="toggle-label">Click here to View Charts</label>
+      <div class="collapsible-content">
+        <div class="content-inner">
+          <BarChart :income="+income" :expenses="+expenses" />
+          <PieChart :income="+income" :expenses="+expenses" />
+        </div>
+      </div>
+    </div>
     <AddTransaction @userSubmitted="handleSubmit" />
   </div>
 </template>
@@ -18,6 +28,8 @@ import Balance from "./components/balance/Balance.vue";
 import IncomeExpenses from "./components/income/IncomeExpenses.vue";
 import TransactionList from "./components/transaction/TransactionList.vue";
 import AddTransaction from "./components/transaction/AddTransaction.vue";
+import BarChart from "./components/chart/BarChart.vue";
+import PieChart from "./components/chart/PieChart.vue";
 import { ref, computed, onMounted } from "vue";
 import { useToast } from "vue-toastification";
 
@@ -31,6 +43,20 @@ onMounted(() => {
   if (saveData) {
     transactions.value = saveData;
   }
+});
+
+// Making collapsible accessible
+let myLabels = document.querySelectorAll('.toggle-label');
+
+Array.from(myLabels).forEach(label => {
+  label.addEventListener('keydown', e => {
+    // 32 === spacebar
+    // 13 === enter
+    if (e.which === 32 || e.which === 13) {
+      e.preventDefault();
+      label.click();
+    };
+  });
 });
 
 // Get total
