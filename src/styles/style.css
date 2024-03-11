@@ -228,6 +228,11 @@ input[type="number"] {
   margin-bottom: 5px;
 }
 
+.error-text {
+  font-style: italic;
+  font-weight: bold;
+}
+
 /* Chart Collapsible CSS */
 input[type='checkbox'] {
   display: none;

@@ -1,6 +1,9 @@
 <template>
-  <div class="pie-chart">
+  <div class="pie-chart" v-if="income > 0 || expenses > 0">
     <Pie :data="chartData" :options="chartOptions"></Pie>
+  </div>
+  <div class="error-text" v-else>
+    <h3>No data available</h3>
   </div>
 </template>
 

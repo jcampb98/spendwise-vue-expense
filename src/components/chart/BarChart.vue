@@ -1,6 +1,9 @@
 <template>
-    <div class="bar-chart">
+    <div class="bar-chart" v-if="income > 0 || expenses > 0">
         <Bar :data="chartData" :options="chartOptions"></Bar>
+    </div>
+    <div class="error-text" v-else>
+        <h3>No data available</h3>
     </div>
 </template>
 
