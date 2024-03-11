@@ -43,7 +43,7 @@ const closeModal = () => {
 };
 
 const submitUpdate = () => {
-  const transaction =  {
+  const transaction = {
     id: updateData.value.id,
     userInput: updateData.value.userInput,
     amount: updateData.value.amount,

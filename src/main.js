@@ -10,5 +10,5 @@ addIcons(HiSolidPencilAlt, HiSolidTrash);
 
 const app = createApp(App);
 app.use(Toast);
-app.component('v-icon', OhVueIcon);
+app.component("v-icon", OhVueIcon);
 app.mount("#app");

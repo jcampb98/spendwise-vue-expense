@@ -9,8 +9,10 @@
       @transactionUpdated="handleUpdate"
     />
     <div class="wrap-collapsible">
-      <input id="collapsible" class="toggle" type="checkbox" checked>
-      <label for="collapsible" class="toggle-label">Click here to View Charts</label>
+      <input id="collapsible" class="toggle" type="checkbox" checked />
+      <label for="collapsible" class="toggle-label"
+        >Click here to View Charts</label
+      >
       <div class="collapsible-content">
         <div class="content-inner">
           <BarChart :income="+income" :expenses="+expenses" />
@@ -46,16 +48,16 @@ onMounted(() => {
 });
 
 // Making collapsible accessible
-let myLabels = document.querySelectorAll('.toggle-label');
+let myLabels = document.querySelectorAll(".toggle-label");
 
-Array.from(myLabels).forEach(label => {
-  label.addEventListener('keydown', e => {
+Array.from(myLabels).forEach((label) => {
+  label.addEventListener("keydown", (e) => {
     // 32 === spacebar
     // 13 === enter
     if (e.which === 32 || e.which === 13) {
       e.preventDefault();
       label.click();
-    };
+    }
   });
 });
 
@@ -120,7 +122,6 @@ const handleUpdate = () => {
   saveTransactionsToLocalStorage();
   toast.success("Successfully updated transaction");
 };
-
 
 // Save to local storage
 const saveTransactionsToLocalStorage = () => {

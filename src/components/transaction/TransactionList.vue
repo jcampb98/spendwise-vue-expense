@@ -12,8 +12,15 @@
           ...
         </button>
         <div v-if="activeDropdown === transaction.id" class="dropdown-content">
-          <button class="icon-button" @click="openUpdateModal(transaction.id)"><v-icon name="hi-solid-pencil-alt" scale="1"/>Update</button>
-          <button class="icon-button" @click="deleteTransaction(transaction.id)"><v-icon name="hi-solid-trash" scale="1"/>Delete</button>
+          <button class="icon-button" @click="openUpdateModal(transaction.id)">
+            <v-icon name="hi-solid-pencil-alt" scale="1" />Update
+          </button>
+          <button
+            class="icon-button"
+            @click="deleteTransaction(transaction.id)"
+          >
+            <v-icon name="hi-solid-trash" scale="1" />Delete
+          </button>
         </div>
       </div>
     </li>
@@ -59,7 +66,7 @@ const openUpdateModal = (id) => {
   updateTarget.value = {
     id: transaction.id,
     userInput: transaction.userInput,
-    amount: transaction.amount
+    amount: transaction.amount,
   };
   showModal.value = true;
 };
@@ -69,7 +76,9 @@ const closeUpdateModal = () => {
 };
 
 const updateTransaction = (updatedTransaction) => {
-  const index = props.transactions.findIndex((t) => t.id === updatedTransaction.id);
+  const index = props.transactions.findIndex(
+    (t) => t.id === updatedTransaction.id,
+  );
   if (index !== -1) {
     // Replace the old transaction with the updated one
     props.transactions[index] = updatedTransaction;
