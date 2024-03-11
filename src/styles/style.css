@@ -228,11 +228,6 @@ input[type="number"] {
   margin-bottom: 5px;
 }
 
-.error-text {
-  font-style: italic;
-  font-weight: bold;
-}
-
 /* Chart Collapsible CSS */
 input[type="checkbox"] {
   display: none;
@@ -251,6 +246,7 @@ input[type="checkbox"] {
   cursor: pointer;
   border-radius: 7px;
   transition: all 0.25s ease-out;
+  margin-bottom: 0;
 }
 
 .toggle-label:hover {
@@ -296,40 +292,69 @@ input[type="checkbox"] {
   border-bottom-left-radius: 0;
 }
 
-/* Define mobile-responsive styles within a media query */
+.error-text {
+  font-style: italic;
+  font-weight: bold;
+}
+
+/* Export to PDF CSS */
+.export-pdf-button {
+  background-color: #F00;
+  color: #fff;
+  display: block;
+  align-items: center;
+  font-family: Roboto, sans-serif;
+  padding: 10px 133px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+  margin-top: 10px;
+}
+
+.export-pdf-button:hover {
+  background-color: #c00;
+}
+
 @media only screen and (width <= 600px) {
   body {
-    font-size: 16px; /* Adjust font size for smaller screens */
+    font-size: 16px;
   }
 
   .container {
-    margin: 20px auto; /* Adjust margin for smaller screens */
-    width: 90%; /* Adjust width for smaller screens */
+    margin: 20px auto;
+    width: 90%;
   }
 
   .inc-exp-container {
-    padding: 10px; /* Adjust padding for smaller screens */
-    flex-direction: column; /* Stack elements vertically for smaller screens */
-    align-items: center; /* Center elements for smaller screens */
+    padding: 10px;
+    flex-direction: column;
+    align-items: center;
   }
 
   .inc-exp-container > div {
-    flex: none; /* Remove flex-grow for smaller screens */
-    width: 100%; /* Make children take full width for smaller screens */
-    margin-bottom: 10px; /* Add space between children for smaller screens */
+    flex: none;
+    width: 100%;
+    margin-bottom: 10px;
   }
 
   input[type="text"],
   input[type="number"] {
-    font-size: 14px; /* Adjust input font size for smaller screens */
+    font-size: 14px;
   }
 
   .btn {
-    font-size: 14px; /* Adjust button font size for smaller screens */
+    font-size: 14px;
   }
 
   .list li {
-    flex-direction: column; /* Stack list items vertically for smaller screens */
-    align-items: flex-start; /* Align list items to the start for smaller screens */
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .export-pdf-button {
+    font-size: 14px;
+    padding: 14px 100px;
   }
 }

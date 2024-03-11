@@ -4,9 +4,9 @@ import "vue-toastification/dist/index.css";
 import "../src/styles/style.css";
 import App from "./App.vue";
 import { OhVueIcon, addIcons } from "oh-vue-icons";
-import { HiSolidPencilAlt, HiSolidTrash } from "oh-vue-icons/icons";
+import { HiSolidPencilAlt, HiSolidTrash, FaRegularFilePdf } from "oh-vue-icons/icons";
 
-addIcons(HiSolidPencilAlt, HiSolidTrash);
+addIcons(HiSolidPencilAlt, HiSolidTrash, FaRegularFilePdf);
 
 const app = createApp(App);
 app.use(Toast);
