@@ -1,22 +1,23 @@
-import { defineWorkspace } from "vitest/config";
+import { defineConfig } from 'vite';
+import vue from '@vitejs/plugin-vue';
 
-export default defineWorkspace([
-  "packages/*",
-  "tests/*/vitest.config.{e2e,unit}.ts",
-  {
-    test: {
-      name: "happy-dom",
-      root: "./shared_tests",
-      environment: "happy-dom",
-      setupFiles: ["./setup.happy-dom.ts"],
+// https://vitejs.dev/config/
+export default defineConfig({
+  plugins: [vue()],
+  vitest:{
+    globals: true,
+    environment: 'jsdom',
+    root: './tests/vitest',
+    coverage: {
+      provider: 'istanbul',
+      reporter: ['text', 'json', 'html'],
+      exclude: [
+        'node_modules/',
+        '/tests/playwright',
+      ],
     },
-  },
-  {
-    test: {
-      name: "node",
-      root: "./shared_tests",
-      environment: "node",
-      setupFiles: ["./setup.node.ts"],
-    },
-  },
-]);
+    compilerOptions: {
+      types: ["node", "jsdom", "@types/testing-library__jest-dom"]
+    }
+  }
+})

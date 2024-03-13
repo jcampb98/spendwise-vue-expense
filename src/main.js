@@ -5,6 +5,9 @@ import "../src/styles/style.css";
 import App from "./App.vue";
 import { OhVueIcon, addIcons } from "oh-vue-icons";
 import { HiSolidPencilAlt, HiSolidTrash, FaRegularFilePdf } from "oh-vue-icons/icons";
+import { inject } from '@vercel/analytics';
+ 
+inject();
 
 addIcons(HiSolidPencilAlt, HiSolidTrash, FaRegularFilePdf);
 
