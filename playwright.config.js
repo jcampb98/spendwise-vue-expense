@@ -66,6 +66,22 @@ export default defineConfig({
       name: "Google Chrome",
       use: { ...devices["Desktop Chrome"], channel: "chrome" },
     },
+    // "iPhone 13 Pro" tests use WebKit browser.
+    {
+      name: 'iPhone 13 Pro',
+      use: {
+          browserName: 'webkit',
+          ...devices['iPhone 13 Pro'],
+      }
+    },
+    // "Pixel 4 landscape" tests use Chromium browser.
+    {
+        name: 'Pixel 4 landscape',
+        use: {
+          browserName: 'chromium',
+          ...devices['Pixel 4 landscape'],
+        },
+    },
   ],
 
   /* Run your local dev server before starting the tests */
