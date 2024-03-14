@@ -299,7 +299,7 @@ input[type="checkbox"] {
 
 /* Export to PDF CSS */
 .export-pdf-button {
-  background-color: #F00;
+  background-color: #f00;
   color: #fff;
   display: block;
   align-items: center;

@@ -1,1 +1,111 @@
-{"C:/Users/Joshi/web dev projects/vue-expense-tracker/src/components/income/IncomeExpenses.vue":{"path":"C:/Users/Joshi/web dev projects/vue-expense-tracker/src/components/income/IncomeExpenses.vue","statementMap":{"0":{"start":{"line":4,"column":18},"end":{"line":26,"column":1}},"1":{"start":{"line":17,"column":2},"end":{"line":17,"column":13}},"2":{"start":{"line":19,"column":14},"end":{"line":19,"column":21}},"3":{"start":{"line":21,"column":21},"end":{"line":21,"column":30}},"4":{"start":{"line":22,"column":0},"end":{"line":22,"column":90}},"5":{"start":{"line":23,"column":0},"end":{"line":23,"column":19}},"6":{"start":{"line":29,"column":19},"end":{"line":29,"column":49}},"7":{"start":{"line":30,"column":32},"end":{"line":30,"column":91}},"8":{"start":{"line":31,"column":19},"end":{"line":34,"column":1}},"9":{"start":{"line":35,"column":32},"end":{"line":35,"column":92}},"10":{"start":{"line":36,"column":19},"end":{"line":39,"column":1}},"11":{"start":{"line":42,"column":2},"end":{"line":51,"column":5}}},"fnMap":{"0":{"name":"(anonymous_0)","decl":{"start":{"line":16,"column":2},"end":{"line":16,"column":3}},"loc":{"start":{"line":16,"column":39},"end":{"line":24,"column":1}},"line":16},"1":{"name":"_sfc_render","decl":{"start":{"line":41,"column":9},"end":{"line":41,"column":20}},"loc":{"start":{"line":41,"column":68},"end":{"line":52,"column":1}},"line":41}},"branchMap":{},"s":{"0":1,"1":1,"2":1,"3":1,"4":1,"5":1,"6":1,"7":1,"8":1,"9":1,"10":1,"11":1},"f":{"0":1,"1":1},"b":{},"inputSourceMap":{"version":3,"names":[],"sources":["C:/Users/Joshi/web dev projects/vue-expense-tracker/src/components/income/IncomeExpenses.vue"],"sourcesContent":["<template>\n  <div class=\"inc-exp-container\">\n    <div>\n      <h4>Income</h4>\n      <p id=\"money-plus\" class=\"money plus\">+£{{ income }}</p>\n    </div>\n    <div>\n      <h4>Expense</h4>\n      <p id=\"money-minus\" class=\"money minus\">-£{{ expenses }}</p>\n    </div>\n  </div>\n</template>\n\n<script setup>\nimport { defineProps } from \"vue\";\n\nconst props = defineProps({\n  income: {\n    type: Number,\n    required: true,\n  },\n  expenses: {\n    type: Number,\n    required: true,\n  },\n});\n</script>\n"],"mappings":"AAckC;AAClC;;;;;;;;;;;;;;;;AAFc;AAGd,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,OASZ,CAAC;;;;;;;;;;qBAxBI,KAAK,EAAC,mBAAmB;gCAE1B,oBAAe,YAAX,QAAM;;EACP,EAAE,EAAC,YAAY;EAAC,KAAK,EAAC,YAAY;;gCAGrC,oBAAgB,YAAZ,SAAO;;EACR,EAAE,EAAC,aAAa;EAAC,KAAK,EAAC,aAAa;;;;wBAP3C,oBASM,OATN,UASM;IARJ,oBAGM;MAFJ,UAAe;MACf,oBAAwD,KAAxD,UAAwD,EAAlB,IAAE,oBAAG,aAAM;;IAEnD,oBAGM;MAFJ,UAAgB;MAChB,oBAA4D,KAA5D,UAA4D,EAApB,IAAE,oBAAG,eAAQ"},"_coverageSchema":"1a1c01bbd47fc00a2c39e90264f33305004495a9","hash":"507877e089d1e3f82fefbc1b60b5956fc80b3778"}}
+{
+  "C:/Users/Joshi/web dev projects/vue-expense-tracker/src/components/income/IncomeExpenses.vue": {
+    "path": "C:/Users/Joshi/web dev projects/vue-expense-tracker/src/components/income/IncomeExpenses.vue",
+    "statementMap": {
+      "0": {
+        "start": { "line": 4, "column": 18 },
+        "end": { "line": 26, "column": 1 }
+      },
+      "1": {
+        "start": { "line": 17, "column": 2 },
+        "end": { "line": 17, "column": 13 }
+      },
+      "2": {
+        "start": { "line": 19, "column": 14 },
+        "end": { "line": 19, "column": 21 }
+      },
+      "3": {
+        "start": { "line": 21, "column": 21 },
+        "end": { "line": 21, "column": 30 }
+      },
+      "4": {
+        "start": { "line": 22, "column": 0 },
+        "end": { "line": 22, "column": 90 }
+      },
+      "5": {
+        "start": { "line": 23, "column": 0 },
+        "end": { "line": 23, "column": 19 }
+      },
+      "6": {
+        "start": { "line": 29, "column": 19 },
+        "end": { "line": 29, "column": 49 }
+      },
+      "7": {
+        "start": { "line": 30, "column": 32 },
+        "end": { "line": 30, "column": 91 }
+      },
+      "8": {
+        "start": { "line": 31, "column": 19 },
+        "end": { "line": 34, "column": 1 }
+      },
+      "9": {
+        "start": { "line": 35, "column": 32 },
+        "end": { "line": 35, "column": 92 }
+      },
+      "10": {
+        "start": { "line": 36, "column": 19 },
+        "end": { "line": 39, "column": 1 }
+      },
+      "11": {
+        "start": { "line": 42, "column": 2 },
+        "end": { "line": 51, "column": 5 }
+      }
+    },
+    "fnMap": {
+      "0": {
+        "name": "(anonymous_0)",
+        "decl": {
+          "start": { "line": 16, "column": 2 },
+          "end": { "line": 16, "column": 3 }
+        },
+        "loc": {
+          "start": { "line": 16, "column": 39 },
+          "end": { "line": 24, "column": 1 }
+        },
+        "line": 16
+      },
+      "1": {
+        "name": "_sfc_render",
+        "decl": {
+          "start": { "line": 41, "column": 9 },
+          "end": { "line": 41, "column": 20 }
+        },
+        "loc": {
+          "start": { "line": 41, "column": 68 },
+          "end": { "line": 52, "column": 1 }
+        },
+        "line": 41
+      }
+    },
+    "branchMap": {},
+    "s": {
+      "0": 1,
+      "1": 1,
+      "2": 1,
+      "3": 1,
+      "4": 1,
+      "5": 1,
+      "6": 1,
+      "7": 1,
+      "8": 1,
+      "9": 1,
+      "10": 1,
+      "11": 1
+    },
+    "f": { "0": 1, "1": 1 },
+    "b": {},
+    "inputSourceMap": {
+      "version": 3,
+      "names": [],
+      "sources": [
+        "C:/Users/Joshi/web dev projects/vue-expense-tracker/src/components/income/IncomeExpenses.vue"
+      ],
+      "sourcesContent": [
+        "<template>\n  <div class=\"inc-exp-container\">\n    <div>\n      <h4>Income</h4>\n      <p id=\"money-plus\" class=\"money plus\">+£{{ income }}</p>\n    </div>\n    <div>\n      <h4>Expense</h4>\n      <p id=\"money-minus\" class=\"money minus\">-£{{ expenses }}</p>\n    </div>\n  </div>\n</template>\n\n<script setup>\nimport { defineProps } from \"vue\";\n\nconst props = defineProps({\n  income: {\n    type: Number,\n    required: true,\n  },\n  expenses: {\n    type: Number,\n    required: true,\n  },\n});\n</script>\n"
+      ],
+      "mappings": "AAckC;AAClC;;;;;;;;;;;;;;;;AAFc;AAGd,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,OASZ,CAAC;;;;;;;;;;qBAxBI,KAAK,EAAC,mBAAmB;gCAE1B,oBAAe,YAAX,QAAM;;EACP,EAAE,EAAC,YAAY;EAAC,KAAK,EAAC,YAAY;;gCAGrC,oBAAgB,YAAZ,SAAO;;EACR,EAAE,EAAC,aAAa;EAAC,KAAK,EAAC,aAAa;;;;wBAP3C,oBASM,OATN,UASM;IARJ,oBAGM;MAFJ,UAAe;MACf,oBAAwD,KAAxD,UAAwD,EAAlB,IAAE,oBAAG,aAAM;;IAEnD,oBAGM;MAFJ,UAAgB;MAChB,oBAA4D,KAA5D,UAA4D,EAApB,IAAE,oBAAG,eAAQ"
+    },
+    "_coverageSchema": "1a1c01bbd47fc00a2c39e90264f33305004495a9",
+    "hash": "507877e089d1e3f82fefbc1b60b5956fc80b3778"
+  }
+}

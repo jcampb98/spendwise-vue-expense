@@ -6,7 +6,8 @@
       v-bind:key="transaction.id"
       :class="transaction.amount < 0 ? 'minus' : 'plus'"
     >
-      {{ transaction.userInput }} <span>£{{ transaction.amount }}</span>
+      {{ transaction.userInput }}
+      <span>{{ selectedCurrency }}{{ transaction.amount }}</span>
       <div class="dropdown">
         <button @click="toggleDropdown(transaction.id)" class="ellipsis-btn">
           ...
@@ -34,7 +35,8 @@
 </template>
 
 <script setup>
-import { defineProps, ref } from "vue";
+import { defineProps, ref, computed } from "vue";
+import store from "../../store.js";
 import UpdateTransactionModal from "./UpdateTransactionModal.vue";
 
 const activeDropdown = ref(null);
@@ -87,4 +89,22 @@ const updateTransaction = (updatedTransaction) => {
     showModal.value = false;
   }
 };
+
+const selectedCurrency = computed(() => {
+  const selectedCurrency = store.state.selectedCurrency;
+  switch (selectedCurrency) {
+    case "USD":
+      return "$";
+    case "EUR":
+      return "€";
+    case "JPY":
+      return "¥";
+    case "GBP":
+      return "£";
+    case "CNY":
+      return "¥";
+    default:
+      return "£"; // Default to GBPsymbol
+  }
+});
 </script>

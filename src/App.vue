@@ -1,5 +1,6 @@
 <template>
   <Header />
+  <Currency />
   <div class="container">
     <div id="pdf-export-data">
       <Balance :total="+total" />
@@ -11,7 +12,9 @@
       />
       <div class="wrap-collapsible">
         <input id="collapsible" class="toggle" type="checkbox" checked />
-        <label for="collapsible" class="toggle-label">Click here to View Charts</label>
+        <label for="collapsible" class="toggle-label"
+          >Click here to View Charts</label
+        >
         <div class="collapsible-content">
           <div class="content-inner">
             <BarChart :income="+income" :expenses="+expenses" />
@@ -34,8 +37,12 @@ import AddTransaction from "./components/transaction/AddTransaction.vue";
 import BarChart from "./components/chart/BarChart.vue";
 import PieChart from "./components/chart/PieChart.vue";
 import PdfExport from "./components/pdf-export/PdfExport.vue";
+import Currency from "./components/currency/Currency.vue";
 import { ref, computed, onMounted } from "vue";
+import { useStore } from "vuex";
 import { useToast } from "vue-toastification";
+
+const store = useStore();
 
 const toast = useToast();
 
