@@ -8,7 +8,7 @@
 </template>
 
 <script setup>
-import { defineProps } from "vue";
+import { defineProps, watch } from "vue";
 import { Pie } from "vue-chartjs";
 import { Chart as ChartJS, ArcElement, Tooltip, Legend } from "chart.js";
 
@@ -41,4 +41,8 @@ const chartOptions = {
   responsive: true,
   maintainAspectRatio: false,
 };
+
+watch(() => [props.income, props.expenses], ([income, expenses]) => {
+  chartData.datasets[0].data = [income, expenses];
+});
 </script>
