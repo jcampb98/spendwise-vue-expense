@@ -101,6 +101,11 @@ input[type="number"] {
   width: 100%;
 }
 
+.btn:hover {
+  color:#888;
+  background-color: #4d3d75;
+}
+
 .ellipsis-btn {
   cursor: pointer;
   background-color: transparent;
@@ -250,7 +255,8 @@ input[type="checkbox"] {
 }
 
 .toggle-label:hover {
-  color: #351c75;
+  color:#888;
+  background-color: #4d3d75;
 }
 
 .toggle-label::before {
@@ -299,7 +305,7 @@ input[type="checkbox"] {
 
 /* Export to PDF CSS */
 .export-pdf-button {
-  background-color: #f00;
+  background-color: #9c88ff;
   color: #fff;
   display: block;
   align-items: center;
@@ -314,7 +320,8 @@ input[type="checkbox"] {
 }
 
 .export-pdf-button:hover {
-  background-color: #c00;
+  color:#888;
+  background-color: #4d3d75;
 }
 
 @media only screen and (width <= 600px) {
