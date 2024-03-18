@@ -65,8 +65,11 @@ const chartOptions = {
   maintainAspectRatio: false,
 };
 
-watch(() => [props.income, props.expenses], ([income, expenses]) => {
-  chartData.datasets[0].data = [income];
-  chartData.datasets[1].data = [expenses];
-});
+watch(
+  () => [props.income, props.expenses],
+  ([income, expenses]) => {
+    chartData.datasets[0].data = [income];
+    chartData.datasets[1].data = [expenses];
+  },
+);
 </script>

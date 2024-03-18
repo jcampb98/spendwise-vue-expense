@@ -42,7 +42,10 @@ const chartOptions = {
   maintainAspectRatio: false,
 };
 
-watch(() => [props.income, props.expenses], ([income, expenses]) => {
-  chartData.datasets[0].data = [income, expenses];
-});
+watch(
+  () => [props.income, props.expenses],
+  ([income, expenses]) => {
+    chartData.datasets[0].data = [income, expenses];
+  },
+);
 </script>

@@ -102,7 +102,7 @@ input[type="number"] {
 }
 
 .btn:hover {
-  color:#888;
+  color: #888;
   background-color: #4d3d75;
 }
 
@@ -256,7 +256,7 @@ input[type="checkbox"] {
 }
 
 .toggle-label:hover {
-  color:#888;
+  color: #888;
   background-color: #4d3d75;
 }
 
@@ -321,7 +321,7 @@ input[type="checkbox"] {
 }
 
 .export-pdf-button:hover {
-  color:#888;
+  color: #888;
   background-color: #4d3d75;
 }
 
